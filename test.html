@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>jquery notify test</title>
+<link rel="StyleSheet" href="./css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="StyleSheet" href="./css/notify.css" type="text/css" media="all" />
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/notify.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+<body>
+<div style="padding:1em;height:1500px;;font-size:1em;background-color:#eeeeee;color:#000000;">
+	<div><button id="alert">alert</button></div>
+	<div><button id="alert2">alert with content</button></div>
+	<div><button id="suc">suc</button></div>
+	<div><button id="suc2">suc with content</button></div>
+	<div><button id="confirm">confirm</button></div>
+</div>
+<script>
+$(function(){
+	$('#alert').click(function(){
+		Notify.alert('test');
+	});
+	$('#alert2').click(function(){
+		Notify.alert({
+			title : 'test',
+			text : 'this is detail content',
+		});
+	});
+
+	$('#suc').click(function(){
+		Notify.suc('suc');
+	});
+
+	$('#suc2').click(function(){
+		Notify.suc({
+			title : 'suc title',
+			text : 'this is detail content',
+		});
+	});
+
+	$('#confirm').click(function(){
+		Notify.confirm({
+			title : 'confirm title',
+			text : 'this is detail content',
+		});
+	});
+
+});
+</script>
+</body>
+</html>
